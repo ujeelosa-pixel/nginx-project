@@ -102,11 +102,18 @@ $result = mysqli_query(
 
 <style>
 
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background: #f4f6f8;
+    font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #1a1446 50%, #24243e);
+    background-attachment: fixed;
+    color: #e6e9ff;
     margin: 0;
     padding: 30px;
+    min-height: 100vh;
 }
 
 .container {
@@ -115,61 +122,113 @@ body {
 }
 
 h1 {
-    color: #333;
+    margin-top: 0;
+    background: linear-gradient(90deg, #00f5d4, #7b61ff, #ff4ecd);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+h2 {
+    color: #00f5d4;
+    margin-top: 0;
 }
 
 .card {
-    background: white;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(123, 97, 255, 0.35);
     padding: 25px;
     margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px #ccc;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45), 0 0 18px rgba(123, 97, 255, 0.15);
+    backdrop-filter: blur(8px);
 }
 
 .success {
-    background: #d4edda;
-    color: #155724;
+    background: rgba(0, 245, 212, 0.12);
+    border: 1px solid #00f5d4;
+    color: #00f5d4;
     padding: 12px;
-    border-radius: 6px;
+    border-radius: 10px;
     margin-bottom: 20px;
+    font-weight: bold;
+    box-shadow: 0 0 14px rgba(0, 245, 212, 0.25);
+}
+
+label {
+    color: #b9b4ff;
+    font-size: 14px;
 }
 
 input {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin: 8px 0 15px 0;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    background: rgba(15, 12, 41, 0.7);
+    color: #ffffff;
+    border: 1px solid rgba(123, 97, 255, 0.5);
+    border-radius: 10px;
+    outline: none;
+    transition: all 0.2s;
+}
+
+input::placeholder {
+    color: #6f6aa8;
+}
+
+input:focus {
+    border-color: #00f5d4;
+    box-shadow: 0 0 12px rgba(0, 245, 212, 0.5);
 }
 
 button {
-    background: #333;
+    background: linear-gradient(90deg, #7b61ff, #ff4ecd);
     color: white;
-    padding: 10px 20px;
+    padding: 12px 28px;
     border: 0;
-    border-radius: 5px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 15px;
     cursor: pointer;
+    box-shadow: 0 0 18px rgba(255, 78, 205, 0.45);
+    transition: all 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(90deg, #00f5d4, #7b61ff);
+    box-shadow: 0 0 24px rgba(0, 245, 212, 0.6);
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
 th, td {
     padding: 12px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid rgba(123, 97, 255, 0.25);
     text-align: left;
 }
 
 th {
-    background: #333;
+    background: linear-gradient(90deg, #7b61ff, #ff4ecd);
     color: white;
+}
+
+tr:hover td {
+    background: rgba(0, 245, 212, 0.07);
 }
 
 .info {
     line-height: 1.8;
+}
+
+.info strong {
+    color: #00f5d4;
 }
 
 </style>
